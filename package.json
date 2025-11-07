@@ -1,0 +1,19 @@
+{
+  "name": "stellar-sails-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx parcel build src/index.html --dist-dir dist",
+    "start": "npx parcel src/index.html --dist-dir dist --open"
+  },
+  "dependencies": {
+    "gsap": "latest",
+    "p5": "latest"
+  },
+  "devDependencies": {
+    "@parcel/transformer-css": "2.12.0",
+    "@parcel/transformer-html": "2.12.0",
+    "@parcel/transformer-js": "2.12.0",
+    "parcel": "2.12.0"
+  }
+}
