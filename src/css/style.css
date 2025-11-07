@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0f; /* Deep space background */
+  color: #e0e0e0; /* Light grey for text */
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Hero Section */
+#hero {
+  background-image: url('../images/hero-spaceship-planet.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+  content: url('../images/stellar-sails-logo.svg'); /* Added logo reference */
+}
+
+.hero-tagline {
+  font-size: 2.5em;
+  margin-top: 10px;
+  font-weight: 300;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Fleet Section */
+.fleet-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.fleet-card {
+  background-color: #1a1a2e;
+  border: 1px solid #3a3a5e;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px; /* Flex basis for card layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fleet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.fleet-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.fleet-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.fleet-card p {
+  font-size: 0.95em;
+  color: #b0b0c0;
+}
+
+/* Destinations Section */
+.destination-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.destination-card {
+  background-color: #1a1a2e;
+  border: 1px solid #3a3a5e;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px; /* Flex basis for card layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.destination-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.destination-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.destination-card p {
+  font-size: 0.95em;
+  color: #b0b0c0;
+}
+
+/* Call to Action Button */
+#book-now-btn {
+  display: inline-block;
+  background-color: #4a90e2; /* Futuristic blue */
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+#book-now-btn:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-tagline {
+    font-size: 2em;
+  }
+
+  .fleet-cards,
+  .destination-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fleet-card,
+  .destination-card {
+    width: 80%; /* Adjust width for smaller screens */
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  #book-now-btn {
+    font-size: 1em;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-tagline {
+    font-size: 1.8em;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+
+  #book-now-btn {
+    width: 90%;
+    text-align: center;
+  }
+}
